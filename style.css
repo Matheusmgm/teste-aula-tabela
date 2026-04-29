@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('global.css');
+@import url('variables.css');
 
 .conteiner-tabela {
     width: 100%;
@@ -61,4 +62,54 @@ caption {
     margin-bottom: 1rem;
     color: var(--text-color);
     font-weight: bold;
+}
+
+/* Media Query para Mobile */
+@media screen and (max-width: 600px) {
+    .conteiner-tabela {
+        padding: 0.5rem;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Esconde o cabeçalho original mas mantém acessível para leitores de tela */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 1.5rem;
+        background-color: var(--panel-bg);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        position: relative;
+        padding-left: 50% !important;
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
 }
