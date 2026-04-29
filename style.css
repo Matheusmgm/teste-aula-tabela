@@ -1,22 +1,64 @@
-html {
-	font-size: 32px;
-	color: blueviolet;
-	background-color: #0E1726;
+@import url('reset.css');
+@import url('global.css');
+
+.conteiner-tabela {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+    background-color: var(--panel-bg);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    padding: 1rem;
 }
 
-.pai {
-	background-color: #9C686E;
-
-	width: 50%;
-
-	font-size: 2em;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
 }
 
-.filha {
-	background-color: hsla(200, 100%, 50%, 0.3);
+thead th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 600;
+}
 
-	width: 50%;
+thead th:first-child { border-radius: 8px 0 0 0; }
+thead th:last-child { border-radius: 0 8px 0 0; }
 
-	font-size: 0.5em;
-	;
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.etiqueta-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-disponivel { background-color: rgba(0, 171, 85, 0.2); color: #00AB55; }
+.status-esgotado { background-color: rgba(231, 81, 90, 0.2); color: #E7515A; }
+
+caption {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
 }

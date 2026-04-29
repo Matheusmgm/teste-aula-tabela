@@ -1,0 +1,24 @@
+:root {
+    --bg-color: #0E1726;
+    --panel-bg: #1B2E4B;
+    --primary-color: #9C686E;
+    --text-color: #E0E6ED;
+    --accent-color: #4361EE;
+    --border-color: #3B3F5C;
+    --success-color: #00AB55;
+    --danger-color: #E7515A;
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
